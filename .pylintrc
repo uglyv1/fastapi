@@ -6,6 +6,7 @@ disable=
       C0116, #missing-function-docstring
       C0209, #Consider-using-f-string
       C0115, #missing-class-docstring
+      W0611, #unused-import
 
 
 # Analyse import fallback blocks. This can be used to support both Python 2 and
