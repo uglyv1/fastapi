@@ -1,5 +1,5 @@
 from typing import Optional 
-from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from sqlalchemy.orm import sessionmaker
 
 database_url = 'sqlite+aiosqlite:///schema.db'
