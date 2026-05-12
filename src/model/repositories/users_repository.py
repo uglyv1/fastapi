@@ -2,8 +2,11 @@
 from sqlalchemy import insert, select
 from src.model.entities.users import user
 from src.model.settings.database_connection_handler import DatabaseConnectionHandler
+from .interface.user_repository import UserRepositoryInterface
 
-class UsersRepository:
+# passing the userrepositoryinterface in the method signature
+# obliges the class to implement all its methods
+class UsersRepository(UserRepositoryInterface):
     async def insert_users(self, user_data: dict) -> None:
         async with DatabaseConnectionHandler() as db_handler:
             query = insert(user).values(**user_data)
