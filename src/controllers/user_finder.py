@@ -1,8 +1,9 @@
 from src.model.repositories.interface.user_repository import UserRepositoryInterface
+from src.controllers.interface.user_finder import UserFinderInterface
 
 # typing the user_repository with the interface takes part on the
 # DI dependency injection (SOLID)
-class UserFinder:
+class UserFinder(UserFinderInterface):
     def __init__(self, user_repository: UserRepositoryInterface) -> None:
         self.__user_repository = user_repository
 
